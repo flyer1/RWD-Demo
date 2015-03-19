@@ -14,7 +14,7 @@
 
         var routes = getRoutes();
 
-        $urlRouterProvider.otherwise("/home");
+        $urlRouterProvider.otherwise("/shell/business");
 
         routes.forEach(function (route) {
             $stateProvider.state(route.stateName, route.config);
@@ -24,20 +24,42 @@
 
     function getRoutes() {
         return [
+             {
+                 // setup an abstract state for the tabs directive
+                 stateName: 'shell',
+                 config: {
+                     url: '/shell',
+                     abstract: true,
+                     views: {
+                         'shell': {
+                             templateUrl: "js/layout/shell.html",
+                             controller: "ShellController as vm",
+                         },
+                     },
+                 }
+             },
             {
-                stateName: 'home',
+                stateName: 'shell.business',
                 config: {
-                    url: '/home',
-                    templateUrl: 'js/home/home.html',
-                    controller: 'HomeController as vm'
+                    url: '/business',
+                    views: {
+                        'main': {
+                            templateUrl: 'js/business/business.html',
+                            controller: 'BusinessController as vm'
+                        }
+                    }
                 }
             },
             {
-                stateName: 'site',
+                stateName: 'shell.site',
                 config: {
                     url: '/sites/:code',
-                    templateUrl: 'js/site/site.html',
-                    controller: 'SiteController as vm',
+                    views: {
+                        'main': {
+                            templateUrl: 'js/site/site.html',
+                            controller: 'SiteController as vm',
+                        }
+                    }
                 }
             }
         ];

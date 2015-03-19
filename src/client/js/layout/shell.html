@@ -1,0 +1,26 @@
+<div>
+    <header class="clearfix">
+        <div>
+            <div class="navbar navbar-fixed-top">
+                <div class="container">
+                    <ul class="nav navbar-nav">
+                        <li>
+                            <img src="../../img/mb-logo.png" />
+                        </li>
+                        <li ng-repeat="navItem in vm.navItems">
+                            <a ui-sref="navItem.name" ng-click="vm.setActive(navItem)" ng-class="{active: vm.isActive(navItem)}">{{navItem.name}}</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <breadcrumbs></breadcrumbs>
+    <side-nav></side-nav>
+    <div id="content" class="content">
+        <div ui-view="main" class="shuffle-animation"></div>
+    </div>
+    <footer>
+        Footer
+    </footer>
+</div>

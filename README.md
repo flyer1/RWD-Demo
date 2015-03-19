@@ -1,6 +1,6 @@
-#Rainbow
+#Responsive Web Design Demo
 
-A daycare website using AngularJS. Because websites don't like postbacks either.
+A simple demo of a website displaying responsive web design.
 
 ## Primary Technology
 - [AngularJS](https://angularjs.org/) - A front end web MV* framework that lets us do databinding, client side routing between pages, custom markup (directives) that is specific to the problem at hand, etc, etc. Basically it's the best thing to come along for web development in a long time.
@@ -92,7 +92,7 @@ gulp watch-less
 
 
 ##Authors
-Just me [Jon Kroeker](https://github.com/flyer1)
+[Jon Kroeker](https://github.com/flyer1) and Roy Drenker
 
 ##License
 Licensed under the MIT Open Source license. For more information, see the LICENSE file in this repository.
