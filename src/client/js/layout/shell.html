@@ -1,4 +1,5 @@
 <div>
+    <!-- NAVBAR -->
     <nav>
         <div class="navbar navbar-fixed-top">
             <div class="container">
@@ -13,19 +14,33 @@
             </div>
         </div>
     </nav>
+    <!-- BANNER -->
     <header class="container banner">
         <div class="banner-image {{vm.currNavItem.code}}" ></div>
     </header>
+    <!-- BREADCRUMB -->
     <div class="container">
         <ol class="breadcrumb">
             <li><a href="#">manitoba.ca</a></li>
             <li><a href="#">{{vm.currNavItem.name}}</a></li>
         </ol>
     </div>
-    <side-nav>
-        Side nav goes here
-    </side-nav>
+    <!-- SIDE NAV -->
+    <div class="container">
+        <div class="sub-nav">
+            <div class="sub-nav-header">
+                <h3>Get Started</h3> 
+            </div>
+            <ul>
+                <li ng-repeat="item in vm.currNavItem.children">
+                    <a>{{item.name}}</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- MAIN CONTENT -->
     <div ui-view="content" class="content shuffle-animation"></div>
+    <!-- FOOTER -->
     <footer>
         Footer
     </footer>
