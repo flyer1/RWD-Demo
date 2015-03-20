@@ -17,7 +17,9 @@
 
         vm.subModule = foundSubModule;
         
-        datacontext.getHtmlContent(vm.subModule.url);
+        if (vm.subModule) {
+            //datacontext.getHtmlContent(vm.subModule.url);
+        }
 
         return;
      
