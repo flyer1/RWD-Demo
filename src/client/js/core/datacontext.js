@@ -6,15 +6,16 @@
         .module('app.core')
         .factory('datacontext', datacontext);
 
-    datacontext.$inject = ['navData'];
+    datacontext.$inject = ['$http', 'navData'];
 
-    function datacontext(navData) {
+    function datacontext($http, navData) {
 
         var siteRepository = null;
 
         var service = {
             getSiteRepository: getSiteRepository,
-            getNavById: getNavById
+            getNavById: getNavById,
+            getHtmlContent: getHtmlContent
         };
 
         return service;
@@ -59,10 +60,19 @@
             else {
                 return null;
             }
-
-
-            
         }
 
+        function getHtmlContent(url) {
+
+
+            $http.get(url)
+                    .success(function (data, status, headers, config) {
+                        debugger;
+                        "content-first-section"
+
+                    })
+                    .error(function (data, status, headers, config) {
+                    });
+        }
     }
 })();

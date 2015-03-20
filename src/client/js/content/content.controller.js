@@ -5,9 +5,9 @@
         .module('app.content')
         .controller('ContentController', ContentController);
 
-    ContentController.$inject = ['$stateParams', '$scope', 'datacontext'];
+    ContentController.$inject = ['$stateParams', 'datacontext'];
 
-    function ContentController($stateParams, $scope, datacontext) {
+    function ContentController($stateParams, datacontext) {
         var vm = this;
 
         var moduleCode = $stateParams.module;
@@ -17,6 +17,8 @@
 
         vm.subModule = foundSubModule;
         
+        datacontext.getHtmlContent(vm.subModule.url);
+
         return;
      
     }

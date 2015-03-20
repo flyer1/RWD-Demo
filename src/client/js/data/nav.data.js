@@ -136,7 +136,7 @@
                      url: '',
                      bannerUrl: '', // Goes to travel manitoba
                      children: [],
-                     color: 'green',
+                     color: 'olive-green',
                  },
             ];
 
