@@ -11,7 +11,7 @@
         var vm = this;
         var siteRepo = datacontext.getSiteRepository();
         vm.navItems = siteRepo.navItems;
-        vm.currNavItem = 'business';
+        vm.currNavItem = vm.navItems[1];
         vm.setActive = setActive;
         vm.isActive = isActive;
 
@@ -20,7 +20,7 @@
         /////////// IMPLEMENTATION /////////////////
         function setActive(navItem) {
             vm.currNavItem = navItem;
-            console.log('active nav is ' + vm.currNavItem);
+            console.log('active nav is ' + vm.currNavItem.code);
         }
 
         function isActive(navItem) {

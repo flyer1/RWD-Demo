@@ -1,26 +1,27 @@
 <div>
     <nav>
-        <div>
-            <div class="navbar navbar-fixed-top">
-                <div class="container">
-                    <ul class="nav navbar-nav">
-                        <li>
-                            <img src="../../img/mb-logo.png" />
-                        </li>
-                        <li ng-repeat="navItem in vm.navItems">
-                            <a href="/#/main/content/{{navItem.code}}/landing" ng-click="vm.setActive(navItem)" ng-class="{active: vm.isActive(navItem)}" class="{{navItem.color}}">{{navItem.name}}</a>
-                        </li>
-                    </ul>
-                </div>
+        <div class="navbar navbar-fixed-top">
+            <div class="container">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <img src="../../img/mb-logo.png" />
+                    </li>
+                    <li ng-repeat="navItem in vm.navItems">
+                        <a href="/#/main/content/{{navItem.code}}/landing" ng-click="vm.setActive(navItem)" ng-class="{active: vm.isActive(navItem)}" class="{{navItem.color}}">{{navItem.name}}</a>
+                    </li>
+                </ul>
             </div>
         </div>
     </nav>
     <header class="container banner">
-        <img ng-src="{{vm.currNavItem.bannerUrl}}" />
+        <div class="banner-image {{vm.currNavItem.code}}" ></div>
     </header>
-    <breadcrumbs class="container breadcrumb">
-        manitoba.ca > {{vm.currNavItem.name}}
-    </breadcrumbs>
+    <div class="container">
+        <ol class="breadcrumb">
+            <li><a href="#">manitoba.ca</a></li>
+            <li><a href="#">{{vm.currNavItem.name}}</a></li>
+        </ol>
+    </div>
     <side-nav>
         Side nav goes here
     </side-nav>

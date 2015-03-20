@@ -21,7 +21,7 @@
                      code: 'your-government',
                      name: 'Your Government',
                      url: '',
-                     bannerUrl: 'http://www.gov.mb.ca/templates/en/template_images/government-header.jpg',
+                     bannerUrl: 'img/government-header.jpg',
                      children: [],
                      color: 'green'
                  },
@@ -29,7 +29,7 @@
                     code: 'business',
                     name: 'Business',
                     url: '',
-                    bannerUrl: 'http://www.gov.mb.ca/templates/en/template_images/business-header.jpg',
+                    bannerUrl: 'img/business-header.jpg',
                     children: [
                         {
                             name: 'Business',
@@ -102,7 +102,7 @@
                      code: 'residents',
                      name: 'Residents',
                      url: '',
-                     bannerUrl: 'http://residents.gov.mb.ca/templates/fr/template_images/residents-header-en.jpg',
+                     bannerUrl: 'img/residents-header-en.jpg',
                      children: [],
                      color: 'yellow',
                  },
@@ -110,7 +110,7 @@
                      code: 'online-services',
                      name: 'Online Services',
                      url: '',
-                     bannerUrl: 'http://www.gov.mb.ca/templates/en/template_images/services-header.jpg',
+                     bannerUrl: 'img/services-header.jpg',
                      children: [],
                      color: 'orange',
                  },

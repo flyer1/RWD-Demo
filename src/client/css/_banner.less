@@ -1,7 +1,34 @@
 
 .banner {
     padding-top: 50px;
+    position: relative;
+    height: 190px;
+    overflow: hidden;
 }
+
+.banner-image {
+    background: -webkit-linear-gradient(rgba(0, 0, 0, 0.6), rgba(23, 21, 21, 0.2) 80px);
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(23, 21, 21, 0.2) 80px);
+    background-size: cover;
+    height: 100%;
+}
+
+.banner-image.business {
+    background-image: url("../img/business-header.jpg");
+}
+
+.banner-image.your-government {
+    background-image: url("../img/government-header.jpg");
+}
+
+.banner-image.residents {
+    background-image: url("../img/residents-header-en.jpg");
+}
+
+.banner-image.online-services {
+    background-image: url("../img/services-header.jpg");
+}
+
 
 .main-banner-background {
     background: linear-gradient(rgba(0, 0, 0, 0.6),rgba(23, 21, 21, 0.2) 80px);
