@@ -4,36 +4,51 @@
 }
 
 .nav.navbar-nav {
-    padding-right: 200px;
 }
 
 .navbar-nav > li {
-    margin-right: 20px;
 }
 
 .navbar-nav > li > a {
-    font-size: 19px;
+    font-size: 18px;
     color: rgba(255, 255, 255, 0.62);
-    line-height: 30px;
+    line-height: 17px;
     cursor: pointer;
-    padding-top: 18px;
-    padding-bottom: 12px;
+    padding: 18px 20px 12px 20px;
     -moz-transition: all .2s;
     -o-transition: all .2s;
     -webkit-transition: all .2s;
     transition: all .2s;
+    border-left: 1px solid rgb(47, 47, 47);
 }
 
+.navbar-nav > li > a.green {
+    border-bottom: 4px solid green;
+}
+
+.navbar-nav > li > a.blue {
+    border-bottom: 4px solid blue;
+}
+
+.navbar-nav > li > a.orange {
+    border-bottom: 4px solid orange;
+}
+
+.navbar-nav > li > a.yellow {
+    border-bottom: 4px solid yellow;
+}
+
+
 .navbar-nav > li > a.active {
+    line-height: 24px;
+    border-bottom-width: 5px;
     background: #222;
-    color: white;
-    border-radius: 10px;
 }
 
 .nav > li > a:focus {
     text-decoration: none;
     color: white;
-    background: #333;
+    background: #222;
 }
 
 .nav > li > a:hover {

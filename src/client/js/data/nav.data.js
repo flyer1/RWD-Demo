@@ -18,13 +18,18 @@
         function getNav() {
             var nav = [
                  {
+                     code: 'your-government',
                      name: 'Your Government',
                      url: '',
-                     children: []
+                     bannerUrl: 'http://www.gov.mb.ca/templates/en/template_images/government-header.jpg',
+                     children: [],
+                     color: 'green'
                  },
                 {
+                    code: 'business',
                     name: 'Business',
                     url: '',
+                    bannerUrl: 'http://www.gov.mb.ca/templates/en/template_images/business-header.jpg',
                     children: [
                         {
                             name: 'Business',
@@ -90,22 +95,32 @@
                             name: 'Operating a Business',
                             url: 'https://www.gov.mb.ca/business/operating/index.html'
                         },
-                    ]
+                    ],
+                    color: 'blue',
                 },
                  {
+                     code: 'residents',
                      name: 'Residents',
                      url: '',
-                     children: []
+                     bannerUrl: 'http://residents.gov.mb.ca/templates/fr/template_images/residents-header-en.jpg',
+                     children: [],
+                     color: 'yellow',
                  },
                  {
+                     code: 'online-services',
                      name: 'Online Services',
                      url: '',
-                     children: []
+                     bannerUrl: 'http://www.gov.mb.ca/templates/en/template_images/services-header.jpg',
+                     children: [],
+                     color: 'orange',
                  },
                  {
+                     code: 'visitors',
                      name: 'Visitors',
                      url: '',
-                     children: []
+                     bannerUrl: '', // Goes to travel manitoba
+                     children: [],
+                     color: 'green',
                  },
             ];
 

@@ -4,9 +4,6 @@
     angular.module('app', [
         'app.core',
         'app.data', 
-        /*
-         * Feature areas
-         */
-        'app.business', 
+        'app.content', 
     ]);
 })();

@@ -2,12 +2,12 @@
     'use strict';
 
     angular
-        .module('app.business')
-        .controller('BusinessController', BusinessController);
+        .module('app.content')
+        .controller('ContentController', ContentController);
 
-    BusinessController.$inject = ['$scope', 'datacontext'];
+    ContentController.$inject = ['$scope', 'datacontext'];
 
-    function BusinessController($scope, datacontext) {
+    function ContentController($scope, datacontext) {
         var vm = this;
 
         vm.sites = [];          // Full list of sites (centres)

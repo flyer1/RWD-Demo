@@ -9,10 +9,9 @@
 
     function ShellController($state, datacontext) {
         var vm = this;
-        
         var siteRepo = datacontext.getSiteRepository();
         vm.navItems = siteRepo.navItems;
-        vm.currNavItem = 'Business';
+        vm.currNavItem = 'business';
         vm.setActive = setActive;
         vm.isActive = isActive;
 
@@ -20,12 +19,12 @@
 
         /////////// IMPLEMENTATION /////////////////
         function setActive(navItem) {
-            vm.currNavItem = navItem.name;
+            vm.currNavItem = navItem;
             console.log('active nav is ' + vm.currNavItem);
         }
 
         function isActive(navItem) {
-            return vm.currNavItem === navItem.name;
+            return vm.currNavItem.code === navItem.code;
         }
     }
 })();

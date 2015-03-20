@@ -1,5 +1,5 @@
 <div>
-    <header class="clearfix">
+    <nav>
         <div>
             <div class="navbar navbar-fixed-top">
                 <div class="container">
@@ -8,18 +8,23 @@
                             <img src="../../img/mb-logo.png" />
                         </li>
                         <li ng-repeat="navItem in vm.navItems">
-                            <a ui-sref="navItem.name" ng-click="vm.setActive(navItem)" ng-class="{active: vm.isActive(navItem)}">{{navItem.name}}</a>
+                            <a href="/#/main/content/{{navItem.code}}/landing" ng-click="vm.setActive(navItem)" ng-class="{active: vm.isActive(navItem)}" class="{{navItem.color}}">{{navItem.name}}</a>
                         </li>
                     </ul>
                 </div>
             </div>
         </div>
+    </nav>
+    <header class="container banner">
+        <img ng-src="{{vm.currNavItem.bannerUrl}}" />
     </header>
-    <breadcrumbs></breadcrumbs>
-    <side-nav></side-nav>
-    <div id="content" class="content">
-        <div ui-view="main" class="shuffle-animation"></div>
-    </div>
+    <breadcrumbs class="container breadcrumb">
+        manitoba.ca > {{vm.currNavItem.name}}
+    </breadcrumbs>
+    <side-nav>
+        Side nav goes here
+    </side-nav>
+    <div ui-view="content" class="content shuffle-animation"></div>
     <footer>
         Footer
     </footer>

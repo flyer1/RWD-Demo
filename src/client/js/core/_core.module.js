@@ -3,8 +3,7 @@
 
     angular.module('app.core', [
         /* 3rd Party modules */
-        'ui.bootstrap',
-        //'ngAnimate',
+        'ngAnimate',
         'ui.router'
     ]);
 })();

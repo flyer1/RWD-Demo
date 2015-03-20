@@ -1,6 +1,6 @@
 (function () {
     'use strict';
 
-    angular.module('app.business', []);
+    angular.module('app.content', []);
 
 })();
