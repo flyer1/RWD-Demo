@@ -14,7 +14,7 @@
 
         var routes = getRoutes();
 
-        $urlRouterProvider.otherwise("/main/content/business/landing");
+        $urlRouterProvider.otherwise("/main/content/business/business");
 
         routes.forEach(function (route) {
             $stateProvider.state(route.stateName, route.config);
@@ -41,7 +41,7 @@
             {
                 stateName: 'main.content',
                 config: {
-                    url: '/content/:module/:submodule',
+                    url: '/content/:module/:subModule',
                     views: {
                         'content': {
                             templateUrl: 'js/content/content.html',

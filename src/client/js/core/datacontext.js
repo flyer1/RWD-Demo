@@ -13,7 +13,8 @@
         var siteRepository = null;
 
         var service = {
-            getSiteRepository: getSiteRepository
+            getSiteRepository: getSiteRepository,
+            getNavById: getNavById
         };
 
         return service;
@@ -46,6 +47,22 @@
             });
         }
 
+        function getNavById(moduleName, subModuleName) {
+
+            var foundModule = _.findWhere(siteRepository.navItems, { code: moduleName });
+            var foundSubModule = null;
+
+            if (foundModule) {
+                foundSubModule = _.findWhere(foundModule.children, { code: subModuleName });
+                return foundSubModule;
+            }
+            else {
+                return null;
+            }
+
+
+            
+        }
 
     }
 })();

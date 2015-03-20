@@ -12,19 +12,33 @@
         var siteRepo = datacontext.getSiteRepository();
         vm.navItems = siteRepo.navItems;
         vm.currNavItem = vm.navItems[1];
-        vm.setActive = setActive;
-        vm.isActive = isActive;
+        vm.currSubNavItem = vm.currNavItem.children[1];
+        vm.isActiveNavItem = isActiveNavItem;
+        vm.isActiveSubNavItem = isActiveSubNavItem;
+
+        vm.setActiveNavItem = setActiveNavItem;
+        vm.setActiveSubNavItem = setActiveSubNavItem;
 
         return;
 
         /////////// IMPLEMENTATION /////////////////
-        function setActive(navItem) {
+
+        function setActiveNavItem(navItem) {
             vm.currNavItem = navItem;
-            console.log('active nav is ' + vm.currNavItem.code);
+            //console.log('active nav is ' + vm.currNavItem.code);
         }
 
-        function isActive(navItem) {
+        function isActiveNavItem(navItem) {
             return vm.currNavItem.code === navItem.code;
+        }
+
+        function setActiveSubNavItem(subNavItem) {
+            vm.currSubNavItem = subNavItem;
+            //console.log('active sub nav is ' + vm.currSubNavItem.code);
+        }
+
+        function isActiveSubNavItem(subNavItem) {
+            return vm.currSubNavItem.code === subNavItem.code;
         }
     }
 })();

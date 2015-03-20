@@ -8,7 +8,7 @@
                         <img src="../../img/mb-logo.png" />
                     </li>
                     <li ng-repeat="navItem in vm.navItems">
-                        <a href="/#/main/content/{{navItem.code}}/landing" ng-click="vm.setActive(navItem)" ng-class="{active: vm.isActive(navItem)}" class="{{navItem.color}}">{{navItem.name}}</a>
+                        <a href="/#/main/content/{{navItem.code}}/landing" ng-click="vm.setActiveNavItem(navItem)" ng-class="{active: vm.isActiveNavItem(navItem)}" class="{{navItem.color}}">{{navItem.name}}</a>
                     </li>
                 </ul>
             </div>
@@ -33,15 +33,17 @@
             </div>
             <ul>
                 <li ng-repeat="item in vm.currNavItem.children">
-                    <a>{{item.name}}</a>
+                    <a href="/#/main/content/{{vm.currNavItem.code}}/{{item.code}}" ng-click="vm.setActiveSubNavItem(item)" ng-class="{active: vm.isActiveSubNavItem(item)}">
+                        <i class="fa fa-caret-right"></i>{{item.name}}
+                    </a>
                 </li>
             </ul>
         </div>
+        <!-- MAIN CONTENT -->
+        <div ui-view="content" class="shuffle-animation"></div>
+        <!-- FOOTER -->
     </div>
-    <!-- MAIN CONTENT -->
-    <div ui-view="content" class="content shuffle-animation"></div>
-    <!-- FOOTER -->
-    <footer>
+    <footer class="container">
         Footer
     </footer>
 </div>
