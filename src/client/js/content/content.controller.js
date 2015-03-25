@@ -18,6 +18,9 @@
         vm.subModule = foundSubModule;
         
         if (vm.subModule) {
+
+            vm.htmlFile = '/js/content/content-html/' + vm.subModule.code + '.html';
+
             //datacontext.getHtmlContent(vm.subModule.url);
         }
 
