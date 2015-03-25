@@ -2978,13 +2978,14 @@ small,
   border-top: 1px solid #eee;
   padding-top: 5px;
   padding-bottom: 5px;
+  padding-left: 20px;
 }
 .features ul li:before {
   content: '\f0da';
   font-family: "FontAwesome";
   display: inline-block;
   width: 1.2em;
-  margin-left: 2px;
+  margin-left: -20px;
   color: #8bb622;
 }
 div.footer {
@@ -3088,10 +3089,21 @@ ul {
 .content-container {
   padding-left: 200px;
 }
+@media (max-width: 767px) {
+  .content-container {
+    padding-left: 0;
+  }
+}
 .main-content {
-  padding: 10px 15px 0 15px;
+  padding: 10px 15px 0;
   border-left: 1px solid #ccc;
   border-right: 1px solid #ccc;
+}
+.main-content > div {
+  padding-bottom: 20px;
+}
+.main-content ul {
+  padding-left: 20px;
 }
 hr {
   border: 0;
