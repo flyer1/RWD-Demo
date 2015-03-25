@@ -26,6 +26,15 @@ h1 {
   //font-weight: 600;
 }
 
+a {
+  color: #333;
+  text-decoration: underline;
+}
+
+a strong, strong a {
+  font-weight: 600;
+}
+
 p {
   color: #666;
   //ont-size: 13.503px;
@@ -61,8 +70,39 @@ h2 {
   font-size: 1.333em;
 }
 
-h3 {font-size: 1.777em;}
+h3 {
+  //font-size: 1.777em;
+  font-size: 1.333em;
+}
 
 h4 {font-size: 1.333em;}
 
 small, .font_small {font-size: 0.75em;}
+
+.features strong {
+  font-weight: 600;
+}
+
+.features ul {
+  list-style-type: none;
+  margin-top: 5px;
+}
+
+.features ul li {
+  border-top: 1px solid #eee;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.features ul li:last-child {
+  //border-bottom: 1px solid #eee;
+}
+
+.features ul li:before {
+  content: '\f0da';
+  font-family: "FontAwesome";
+  display: inline-block;
+  width: 1.2em;
+  margin-left: 2px;
+  color: rgb(139, 182, 34);
+}

@@ -2890,6 +2890,14 @@ Copyright (c) 2015 Daniel Eden
   color: white;
   text-decoration: underline;
 }
+a {
+  color: #333;
+  text-decoration: underline;
+}
+a strong,
+strong a {
+  font-weight: 600;
+}
 p {
   color: #666;
 }
@@ -2922,7 +2930,7 @@ h2 {
   font-size: 1.333em;
 }
 h3 {
-  font-size: 1.777em;
+  font-size: 1.333em;
 }
 h4 {
   font-size: 1.333em;
@@ -2930,6 +2938,26 @@ h4 {
 small,
 .font_small {
   font-size: 0.75em;
+}
+.features strong {
+  font-weight: 600;
+}
+.features ul {
+  list-style-type: none;
+  margin-top: 5px;
+}
+.features ul li {
+  border-top: 1px solid #eee;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.features ul li:before {
+  content: '\f0da';
+  font-family: "FontAwesome";
+  display: inline-block;
+  width: 1.2em;
+  margin-left: 2px;
+  color: #8bb622;
 }
 .footer {
   height: 33px;
@@ -2945,13 +2973,14 @@ small,
   padding-right: 20px;
 }
 .navbar-nav > li > a {
+  text-decoration: none;
   font-size: 15px;
   color: rgba(255, 255, 255, 0.62);
   line-height: 17px;
   cursor: pointer;
   padding: 16px;
-  -webkit-transition: all .2s;
-  transition: all .2s;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
   border-left: 1px solid #2f2f2f;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.51);
 }
@@ -2991,7 +3020,7 @@ small,
 }
 .nav .open > a,
 .nav .open > a:hover {
-  background: #333333;
+  background: #333;
 }
 body {
   font-family: "Open Sans", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
@@ -3008,23 +3037,27 @@ label {
 ul {
   padding-left: 0;
 }
+.content-container {
+  padding-left: 200px;
+}
 .main-content {
-  padding-left: 215px;
   padding-top: 10px;
+  padding-left: 15px;
+  border-left: 1px solid #ccc;
 }
 hr {
   border: 0;
-  height: 2px;
+  height: 3px;
   margin: 18px 0;
   position: relative;
   /* FF3.6+ */
   background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(0, 0, 0, 0)), color-stop(10%, rgba(0, 0, 0, 0)), color-stop(50%, rgba(0, 0, 0, 0.65)), color-stop(90%, rgba(0, 0, 0, 0)), color-stop(100%, rgba(0, 0, 0, 0)));
   /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 0.65) 50%, rgba(0, 0, 0, 0) 90%, rgba(0, 0, 0, 0) 100%);
+  background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 0.12) 50%, rgba(0, 0, 0, 0) 90%, rgba(0, 0, 0, 0) 100%);
   /* Chrome10+,Safari5.1+ */
   /* Opera 11.10+ */
   /* IE10+ */
-  background: linear-gradient(left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 0.65) 50%, rgba(0, 0, 0, 0) 90%, rgba(0, 0, 0, 0) 100%);
+  background: linear-gradient(left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 0.12) 50%, rgba(0, 0, 0, 0) 90%, rgba(0, 0, 0, 0) 100%);
   /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#00000000', GradientType=1);
   /* IE6-9 */
@@ -3100,6 +3133,7 @@ hr:before {
   border-top: 2px solid white;
 }
 .sub-nav ul li a {
+  text-decoration: none;
   position: relative;
   color: #222;
   line-height: 27px;
