@@ -1,4 +1,4 @@
-// This file retrieves the data objects from the data folder and then adds on computed properties onto the object. 
+// This file retrieves the data objects from the data folder and then adds on computed properties onto the object.
 (function () {
     'use strict';
 
@@ -22,7 +22,7 @@
 
         /************************* IMPLEMENTATION ******************************/
 
-        // Return the entire data repository for the entire site. 
+        // Return the entire data repository for the entire site.
         function getSiteRepository() {
 
             if (siteRepository !== null) {
@@ -52,14 +52,19 @@
 
             var foundModule = _.findWhere(siteRepository.navItems, { code: moduleName });
             var foundSubModule = null;
+            var result = null;
 
             if (foundModule) {
                 foundSubModule = _.findWhere(foundModule.children, { code: subModuleName });
-                return foundSubModule;
+
+                if (foundSubModule) {
+                  result = foundSubModule;
+                } else if (foundModule.children.length > 0) {
+                  result = foundModule.children[0];
+                }
             }
-            else {
-                return null;
-            }
+            
+            return result;
         }
 
         function getHtmlContent(url) {

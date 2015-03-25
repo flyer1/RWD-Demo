@@ -16,7 +16,7 @@
         var foundSubModule = datacontext.getNavById(moduleCode, subModuleCode);
 
         vm.subModule = foundSubModule;
-        
+
         if (vm.subModule) {
 
             vm.htmlFile = '/js/content/content-html/' + vm.subModule.code + '.html';
@@ -25,7 +25,6 @@
         }
 
         return;
-     
+
     }
 })();
-

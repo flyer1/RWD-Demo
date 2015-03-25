@@ -2866,58 +2866,6 @@ Copyright (c) 2015 Daniel Eden
   height: 600px;
   background-attachment: fixed;
 }
-.main-banner img.kenburns-effect {
-  -webkit-animation: zoom 12s alternate infinite;
-  animation: zoom 12s alternate infinite;
-  position: absolute;
-  top: 0;
-  left: -5%;
-  width: 110%;
-  height: 165%;
-}
-.main-banner .title {
-  position: absolute;
-  width: 100%;
-  z-index: 2;
-  background: -webkit-linear-gradient(top, rgba(23, 23, 23, 0) 0, rgba(23, 23, 23, 0.55) 100%);
-  background: linear-gradient(to bottom, rgba(23, 23, 23, 0) 0, rgba(23, 23, 23, 0.55) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#00171717", endColorstr="#b3171717", GradientType=0);
-  -webkit-transition: height 0.25s ease-in-out;
-  transition: height 0.25s ease-in-out;
-  height: 200px;
-  left: 0;
-  bottom: 0;
-  padding: 20px;
-}
-.main-banner .title h1 {
-  color: white;
-  font-family: "Roboto";
-  margin-bottom: 10px;
-  font-size: 3em;
-  line-height: 1.2em;
-  font-weight: bold;
-  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
-}
-.main-banner .title h1 .emphasis {
-  color: orange;
-  font-size: 68px;
-}
-.main-banner .title h1 .normal {
-  display: inline-block;
-  font-size: 63px;
-  font-weight: 100;
-  word-spacing: -7px;
-}
-.main-banner .title .lead {
-  font-weight: 600;
-  color: rgba(255, 255, 255, 0.84);
-  font-size: 22px;
-  margin-top: 15px;
-}
-.jumbotron {
-  color: rgba(255, 255, 255, 0.05);
-  padding: 0;
-}
 .breadcrumb {
   border-radius: 0;
   width: 100%;
@@ -2927,9 +2875,6 @@ Copyright (c) 2015 Daniel Eden
 }
 .breadcrumb li a {
   color: white;
-}
-.center-text {
-  text-align: center;
 }
 .browsehappy {
   background: #FF4B4B;
@@ -2944,6 +2889,47 @@ Copyright (c) 2015 Daniel Eden
 .browsehappy a {
   color: white;
   text-decoration: underline;
+}
+p {
+  color: #666;
+}
+html {
+  font-size: 0.875em;
+}
+body {
+  background-color: white;
+  font-family: 'Open Sans', serif;
+  font-weight: 400;
+  line-height: 1.45;
+  color: #333;
+}
+p {
+  margin-bottom: 1.3em;
+}
+h1,
+h2,
+h3,
+h4 {
+  margin: 1.414em 0 0.5em;
+  font-weight: inherit;
+  line-height: 1.2;
+}
+h1 {
+  margin-top: 0;
+  font-size: 1.777em;
+}
+h2 {
+  font-size: 1.333em;
+}
+h3 {
+  font-size: 1.777em;
+}
+h4 {
+  font-size: 1.333em;
+}
+small,
+.font_small {
+  font-size: 0.75em;
 }
 .footer {
   height: 33px;
@@ -3007,53 +2993,6 @@ Copyright (c) 2015 Daniel Eden
 .nav .open > a:hover {
   background: #333333;
 }
-.dropdown-menu > li {
-  border-bottom: 1px solid #eee;
-}
-.dropdown-menu > li:last-child {
-  border-bottom: none;
-}
-.dropdown-menu.with-arrow {
-  background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
-}
-.navbar-nav > li > .dropdown-menu.with-arrow {
-  border-top-right-radius: 10px;
-  border-top-left-radius: 10px;
-}
-.dropdown-menu.with-arrow > li > a {
-  padding-bottom: 15px;
-  padding-top: 18px;
-  padding-right: 35px;
-  -webkit-transition: background 100ms linear;
-  transition: background 100ms linear;
-}
-.dropdown-menu.with-arrow > li > a > p {
-  color: #4e5758;
-  font-size: 18px;
-  margin-bottom: 2px;
-  line-height: 20px;
-}
-.dropdown-menu.with-arrow > li > a > small {
-  color: #7B7B7B;
-  font-size: 14px;
-  line-height: 20px;
-}
-.dropdown-menu.with-arrow > li > a:hover {
-  background: rgba(0, 0, 0, 0.1);
-}
-.dropdown-menu.with-icons > li > a {
-  padding-left: 40px;
-  position: relative;
-}
-.dropdown-menu.with-icons > li > a > .icon {
-  position: absolute;
-  left: 16px;
-  font-size: 13px;
-  color: #A8A8A8;
-  top: 31px;
-}
 body {
   font-family: "Open Sans", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
   -webkit-user-select: text;
@@ -3066,14 +3005,39 @@ body {
 label {
   font-weight: normal;
 }
-h1,
-h2,
-h3 {
-  margin-top: 0;
-  margin-bottom: 0;
-}
 ul {
   padding-left: 0;
+}
+.main-content {
+  padding-left: 215px;
+  padding-top: 10px;
+}
+hr {
+  border: 0;
+  height: 2px;
+  margin: 18px 0;
+  position: relative;
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(0, 0, 0, 0)), color-stop(10%, rgba(0, 0, 0, 0)), color-stop(50%, rgba(0, 0, 0, 0.65)), color-stop(90%, rgba(0, 0, 0, 0)), color-stop(100%, rgba(0, 0, 0, 0)));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 0.65) 50%, rgba(0, 0, 0, 0) 90%, rgba(0, 0, 0, 0) 100%);
+  /* Chrome10+,Safari5.1+ */
+  /* Opera 11.10+ */
+  /* IE10+ */
+  background: linear-gradient(left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 0.65) 50%, rgba(0, 0, 0, 0) 90%, rgba(0, 0, 0, 0) 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#00000000', GradientType=1);
+  /* IE6-9 */
+}
+hr:before {
+  content: "";
+  display: block;
+  border-top: solid 1px #f9f9f9;
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  top: 50%;
+  z-index: 1;
 }
 .horizontal-group li {
   float: left;
@@ -3127,6 +3091,7 @@ ul {
   font-size: 20px;
   line-height: 40px;
   padding-left: 13px;
+  margin-top: 0;
 }
 .sub-nav ul {
   list-style-type: none;
