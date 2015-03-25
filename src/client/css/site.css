@@ -2898,6 +2898,13 @@ Copyright (c) 2015 Daniel Eden
 .breadcrumb li a {
   color: white;
 }
+.main-content form button {
+  background: #aaa;
+  border: none;
+  color: white;
+  border-radius: 3px;
+  margin-left: 7px;
+}
 .browsehappy {
   background: #FF4B4B;
   color: white;
@@ -2979,6 +2986,9 @@ small,
   padding-top: 5px;
   padding-bottom: 5px;
   padding-left: 20px;
+}
+.features ul li a {
+  text-decoration: none;
 }
 .features ul li:before {
   content: '\f0da';
