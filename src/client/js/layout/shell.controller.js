@@ -18,7 +18,7 @@
 
         vm.setActiveNavItem = setActiveNavItem;
         vm.setActiveSubNavItem = setActiveSubNavItem;
-
+console.log(vm.currNavItem);
         return;
 
         /////////// IMPLEMENTATION /////////////////
