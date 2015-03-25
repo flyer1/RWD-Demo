@@ -1,4 +1,26 @@
 @charset "UTF-8";
+.my-fade-container {
+  position: relative;
+}
+.my-fade-animation.ng-enter,
+.my-fade-animation.ng-leave {
+  -webkit-transition: 0.5s linear all;
+  transition: 0.5s linear all;
+}
+.my-fade-animation.ng-enter {
+  z-index: 100;
+  opacity: 0;
+}
+.my-fade-animation.ng-enter.ng-enter-active {
+  opacity: 1;
+}
+.my-fade-animation.ng-leave {
+  z-index: 101;
+  opacity: 1;
+}
+.my-fade-animation.ng-leave.ng-leave-active {
+  opacity: 0;
+}
 .animate-fade.ng-enter {
   -webkit-animation: zoomIn .3s;
   animation: zoomIn .3s;
@@ -2832,9 +2854,9 @@ Copyright (c) 2015 Daniel Eden
     margin-top: -10px;
 }*/
 .banner {
-  padding-top: 50px;
+  padding-top: 53px;
   position: relative;
-  height: 190px;
+  height: 223px;
   overflow: hidden;
 }
 .banner-image {
@@ -2861,7 +2883,7 @@ Copyright (c) 2015 Daniel Eden
   background: -webkit-linear-gradient(rgba(0, 0, 0, 0.6), rgba(23, 21, 21, 0.2) 80px);
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(23, 21, 21, 0.2) 80px);
   background-position-y: center;
-  background: url('../img/painted.hands.png') no-repeat fixed center;
+  background: url("../img/painted.hands.png") no-repeat fixed center;
   background-size: cover;
   height: 600px;
   background-attachment: fixed;
@@ -2925,9 +2947,15 @@ h4 {
 h1 {
   margin-top: 0;
   font-size: 1.777em;
+  font-weight: 500;
 }
-h2 {
+h1 strong {
+  font-weight: 500;
+}
+h2,
+h2 strong {
   font-size: 1.333em;
+  font-weight: 500;
 }
 h3 {
   font-size: 1.333em;
@@ -2959,15 +2987,35 @@ small,
   margin-left: 2px;
   color: #8bb622;
 }
-.footer {
-  height: 33px;
-  padding: 5px 20px;
-  background: #333;
-  color: #ccc;
+div.footer {
+  height: 100%;
+  background: #017d3e;
+  color: white;
+  padding-left: 20px;
+}
+.footer ul {
+  list-style-type: none;
+  float: left;
+  padding-right: 26px;
+}
+.footer ul li {
+  border-bottom: 1px dotted rgba(255, 255, 255, 0.6);
+  padding-bottom: 2px;
+  padding-top: 2px;
+}
+.footer ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 12px;
+}
+.footer ul li:first-child a {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 36px;
 }
 .navbar {
   background: #222;
-  height: 27px;
+  height: 53px;
 }
 .nav.navbar-nav {
   padding-right: 20px;
@@ -3041,9 +3089,9 @@ ul {
   padding-left: 200px;
 }
 .main-content {
-  padding-top: 10px;
-  padding-left: 15px;
+  padding: 10px 15px 0 15px;
   border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
 }
 hr {
   border: 0;
