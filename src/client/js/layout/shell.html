@@ -1,7 +1,7 @@
 <div>
     <!-- NAVBAR -->
     <nav>
-        <div class="navbar navbar-fixed-top">
+        <div class="navbar navbar-fixed-top clearfix">
             <div class="container">
                 <ul class="nav navbar-nav">
                     <li>
@@ -10,10 +10,11 @@
                     </li>
                     <li class="spacer hidden-xs hidden-sm"></li>
                     <li ng-repeat="navItem in vm.navItems" class="hidden-xs hidden-sm">
-                        <a href="/#/main/content/{{navItem.code}}/landing" ng-click="vm.setActiveNavItem(navItem)" ng-class="{active: vm.isActiveNavItem(navItem)}" class="{{navItem.color}}">{{navItem.name}}</a>
+                        <a href="/#/main/content/{{navItem.code}}/landing" ng-click="vm.setActiveNavItem(navItem)" ng-class="{active: vm.isActiveNavItem(navItem)}" class="{{navItem.color}}">
+                          {{navItem.name}}</a>
                     </li>
                     <li class="pull-right flat hidden-md hidden-lg">
-                        <a>
+                        <a ng-click="vm.toggleMenu()">
                             <i class="glyphicon glyphicon-menu-hamburger"></i>
                         </a>
                     </li>
@@ -23,14 +24,26 @@
                         </a>
                     </li>
                 </ul>
-
             </div>
         </div>
     </nav>
-    <!-- BANNER -->
+
     <header class="container banner">
+      <!-- MOBILE MENU -->
+        <ul ng-show="vm.isMenuOpen" class="menu slide-open-closed">
+          <li ng-repeat="navItem in vm.navItems">
+            <a ng-click="vm.toggleSubMenu(navItem)">{{navItem.name}}<i class="pull-right glyphicon glyphicon-menu-down menu-arrow"></i></a>
+            <ul class="sub-menu slide-open-closed" ng-class="{ 'ng-hide' : !navItem.isOpen }" >
+              <li ng-repeat="subNavItem in navItem.children">
+                <a>{{subNavItem.name}}</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <!-- BANNER -->
         <div class="banner-image {{vm.currNavItem.code}}"></div>
     </header>
+
     <!-- BREADCRUMB -->
     <div class="container">
         <ol class="breadcrumb">
@@ -38,6 +51,7 @@
             <li><a href="#">{{vm.currNavItem.name}}</a></li>
         </ol>
     </div>
+
     <!-- SIDE NAV -->
     <div class="container">
         <div class="sub-nav hidden-xs">

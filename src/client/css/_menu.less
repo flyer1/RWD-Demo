@@ -1,0 +1,48 @@
+ul.menu,
+ul.sub-menu {
+    list-style-type: none;
+    margin-bottom: 0;
+    overflow: hidden;
+}
+
+ul.menu li a .menu-arrow {
+    color: #999;
+}
+
+ul.menu li a {
+    text-decoration: none;
+    display: inline-block;
+    width: 100%;
+    padding: 8px 15px 8px 20px;
+    border-bottom: 1px solid #ccc;
+}
+
+ul.sub-menu li a {
+    padding-left: 40px;
+    background: #f8f8f8;
+    font-size: 13px;
+}
+
+.slide-open-closed {
+  -webkit-transition: max-height 1s;
+  transition: all ease-in-out 1s;
+}
+
+.slide-open-closed.ng-hide-add {
+    // Note: getting this to work more generically is difficult. This (explicitly indicating a max-height) wouldn't fly with a dynamically sized menu
+    max-height: 185px;
+    display: block !important;
+}
+
+.slide-open-closed.ng-hide-add.ng-hide-add-active {
+    max-height: 0;
+}
+
+.slide-open-closed.ng-hide-remove {
+    max-height: 0;
+    display: block !important;
+}
+
+.slide-open-closed.ng-hide-remove.ng-hide-remove-active {
+    max-height: 185px;
+}

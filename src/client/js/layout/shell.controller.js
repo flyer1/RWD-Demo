@@ -13,11 +13,15 @@
         vm.navItems = siteRepo.navItems;
         vm.currNavItem = vm.navItems[1];
         vm.currSubNavItem = vm.currNavItem.children[0];
+        vm.isMenuOpen = false;
+
         vm.isActiveNavItem = isActiveNavItem;
         vm.isActiveSubNavItem = isActiveSubNavItem;
         vm.setActiveNavItem = setActiveNavItem;
         vm.setActiveSubNavItem = setActiveSubNavItem;
-        console.log(vm.currNavItem);
+        vm.toggleMenu = toggleMenu;
+        vm.toggleSubMenu = toggleSubMenu;
+
         return;
 
         /////////// IMPLEMENTATION /////////////////
@@ -38,6 +42,15 @@
 
         function isActiveSubNavItem(subNavItem) {
             return vm.currSubNavItem.code === subNavItem.code;
+        }
+
+        function toggleMenu() {
+          // TODO: Toggle the sub-menu closed first.
+          vm.isMenuOpen = !vm.isMenuOpen;
+        }
+
+        function toggleSubMenu(subMenuItem) {
+          subMenuItem.isOpen = !subMenuItem.isOpen;
         }
     }
 })();
