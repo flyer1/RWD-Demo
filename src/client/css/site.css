@@ -2891,8 +2891,9 @@ Copyright (c) 2015 Daniel Eden
   border-radius: 0;
   width: 100%;
   background: #077d40;
-  margin-top: 1px;
+  margin-top: 0;
   margin-bottom: 0;
+  border-top: 1px solid white;
 }
 .breadcrumb li a {
   color: white;
@@ -2933,7 +2934,7 @@ html {
   font-size: 0.875em;
 }
 body {
-  background-color: white;
+  background: url("/img/background.png");
   font-family: 'Open Sans', serif;
   font-weight: 400;
   line-height: 1.45;
@@ -3165,7 +3166,6 @@ body {
   -moz-user-select: text;
   -ms-user-select: text;
   user-select: text;
-  background: #fff;
   cursor: default;
 }
 label {
@@ -3181,6 +3181,9 @@ ul {
   .content-container {
     padding-left: 0;
   }
+}
+.main-content-container {
+  background: white;
 }
 .main-content {
   padding: 10px 20px 0;
