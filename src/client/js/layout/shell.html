@@ -5,14 +5,19 @@
             <div class="container">
                 <ul class="nav navbar-nav">
                     <li>
-                        <img src="../../img/mb-logo.png" />
+                        <img class="logo hidden-xxs" src="../../img/mb-logo-white.png" />
+                        <img class="logo logo-sm visible-xxs-inline-block" src="../../img/mb-logo-sm-white.png" />
                     </li>
-                    <li ng-repeat="navItem in vm.navItems">
+                    <li class="spacer hidden-xs hidden-sm"></li>
+                    <li ng-repeat="navItem in vm.navItems" class="hidden-xs hidden-sm">
                         <a href="/#/main/content/{{navItem.code}}/landing" ng-click="vm.setActiveNavItem(navItem)" ng-class="{active: vm.isActiveNavItem(navItem)}" class="{{navItem.color}}">{{navItem.name}}</a>
                     </li>
-                </ul>
-                <ul class="nav navbar-nav pull-right flat">
-                    <li>
+                    <li class="pull-right flat hidden-md hidden-lg">
+                        <a>
+                            <i class="glyphicon glyphicon-menu-hamburger"></i>
+                        </a>
+                    </li>
+                    <li class="pull-right flat">
                         <a>
                             <i class="fa fa-search"></i>
                         </a>
@@ -24,7 +29,7 @@
     </nav>
     <!-- BANNER -->
     <header class="container banner">
-        <div class="banner-image {{vm.currNavItem.code}}" ></div>
+        <div class="banner-image {{vm.currNavItem.code}}"></div>
     </header>
     <!-- BREADCRUMB -->
     <div class="container">
