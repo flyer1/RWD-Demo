@@ -3042,6 +3042,7 @@ ul.sub-menu {
   list-style-type: none;
   margin-bottom: 0;
   overflow: hidden;
+  background: white;
 }
 ul.menu li a .menu-arrow {
   color: #999;
@@ -3259,6 +3260,13 @@ hr:before {
     padding-left: 0;
     padding-right: 0;
   }
+}
+.main {
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.44);
+}
+.container {
+  padding-left: 0;
+  padding-right: 0;
 }
 .footer {
   height: 52px;

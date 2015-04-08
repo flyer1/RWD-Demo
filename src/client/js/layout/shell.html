@@ -27,48 +27,49 @@
             </div>
         </div>
     </nav>
-
-    <header class="container banner">
-      <!-- MOBILE MENU -->
-        <ul ng-show="vm.isMenuOpen" class="menu slide-open-closed">
-          <li ng-repeat="navItem in vm.navItems">
-            <a ng-click="vm.toggleSubMenu(navItem)">{{navItem.name}}<i class="pull-right glyphicon glyphicon-menu-down menu-arrow"></i></a>
-            <ul class="sub-menu slide-open-closed" ng-class="{ 'ng-hide' : !navItem.isOpen }" >
-              <li ng-repeat="subNavItem in navItem.children">
-                <a>{{subNavItem.name}}</a>
-              </li>
-            </ul>
-          </li>
-        </ul>
-        <!-- BANNER -->
-        <div class="banner-image {{vm.currNavItem.code}}"></div>
-    </header>
-
-    <!-- BREADCRUMB -->
-    <div class="container">
-        <ol class="breadcrumb">
-            <li><a href="#">manitoba.ca</a></li>
-            <li><a href="#">{{vm.currNavItem.name}}</a></li>
-        </ol>
-    </div>
-
-    <!-- SIDE NAV -->
-    <div class="container">
-        <div class="sub-nav hidden-xs">
-            <div class="sub-nav-header">
-                <h3>Get Started</h3>
-            </div>
-            <ul>
-                <li ng-repeat="item in vm.currNavItem.children">
-                    <a href="/#/main/content/{{vm.currNavItem.code}}/{{item.code}}" ng-click="vm.setActiveSubNavItem(item)" ng-class="{active: vm.isActiveSubNavItem(item)}">
-                        <i class="fa fa-caret-right"></i>{{item.name}}
-                    </a>
+    <div class="container main">
+        <header class="banner">
+            <!-- MOBILE MENU -->
+            <ul ng-show="vm.isMenuOpen" class="menu slide-open-closed">
+                <li ng-repeat="navItem in vm.navItems">
+                    <a ng-click="vm.toggleSubMenu(navItem)">{{navItem.name}}<i class="pull-right glyphicon glyphicon-menu-down menu-arrow"></i></a>
+                    <ul class="sub-menu slide-open-closed" ng-class="{ 'ng-hide' : !navItem.isOpen }">
+                        <li ng-repeat="subNavItem in navItem.children">
+                            <a>{{subNavItem.name}}</a>
+                        </li>
+                    </ul>
                 </li>
             </ul>
+            <!-- BANNER -->
+            <div class="banner-image {{vm.currNavItem.code}}"></div>
+        </header>
+
+        <!-- BREADCRUMB -->
+        <div>
+            <ol class="breadcrumb">
+                <li><a href="#">manitoba.ca</a></li>
+                <li><a href="#">{{vm.currNavItem.name}}</a></li>
+            </ol>
         </div>
-        <!-- MAIN CONTENT -->
-        <div ui-view="content" class="main-content-container"></div>
-        <!-- FOOTER -->
-        <ng-include src="'./js/layout/footer.html'"></ng-include>
+
+        <!-- SIDE NAV -->
+        <div>
+            <div class="sub-nav hidden-xs">
+                <div class="sub-nav-header">
+                    <h3>Get Started</h3>
+                </div>
+                <ul>
+                    <li ng-repeat="item in vm.currNavItem.children">
+                        <a href="/#/main/content/{{vm.currNavItem.code}}/{{item.code}}" ng-click="vm.setActiveSubNavItem(item)" ng-class="{active: vm.isActiveSubNavItem(item)}">
+                            <i class="fa fa-caret-right"></i>{{item.name}}
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- MAIN CONTENT -->
+            <div ui-view="content" class="main-content-container"></div>
+            <!-- FOOTER -->
+            <ng-include src="'./js/layout/footer.html'"></ng-include>
+        </div>
     </div>
 </div>
