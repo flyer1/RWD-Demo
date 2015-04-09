@@ -45,12 +45,17 @@
         }
 
         function toggleMenu() {
-          // TODO: Toggle the sub-menu closed first.
-          vm.isMenuOpen = !vm.isMenuOpen;
+            // Toggle the sub-menu closed first.
+            _.forEach(vm.navItems, function(navItem) {
+                navItem.isOpen = false;
+            });
+
+            vm.isMenuOpen = !vm.isMenuOpen;
         }
 
-        function toggleSubMenu(subMenuItem) {
-          subMenuItem.isOpen = !subMenuItem.isOpen;
+        function toggleSubMenu(navItem) {
+            setActiveNavItem(navItem);
+            navItem.isOpen = !navItem.isOpen;
         }
     }
 })();

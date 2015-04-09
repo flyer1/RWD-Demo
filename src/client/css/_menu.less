@@ -22,11 +22,17 @@ ul.sub-menu li a {
     padding-left: 40px;
     background: #f8f8f8;
     font-size: 13px;
+    transition: background ease-in-out .2s;
+}
+
+ul.sub-menu li a.active {
+  background: rgb(64, 178, 94);
+  color: white;
 }
 
 .slide-open-closed {
-  -webkit-transition: max-height 1s;
-  transition: all ease-in-out 1s;
+  -webkit-transition: max-height .5s;
+  transition: all ease-in-out .5s;
 }
 
 .slide-open-closed.ng-hide-add {

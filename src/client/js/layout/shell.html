@@ -11,11 +11,15 @@
                     <li class="spacer hidden-xs hidden-sm"></li>
                     <li ng-repeat="navItem in vm.navItems" class="hidden-xs hidden-sm">
                         <a href="/#/main/content/{{navItem.code}}/landing" ng-click="vm.setActiveNavItem(navItem)" ng-class="{active: vm.isActiveNavItem(navItem)}" class="{{navItem.color}}">
-                          {{navItem.name}}</a>
+                          {{navItem.name}}
+                        </a>
                     </li>
                     <li class="pull-right flat hidden-md hidden-lg">
-                        <a ng-click="vm.toggleMenu()">
-                            <i class="glyphicon glyphicon-menu-hamburger"></i>
+                        <a ng-click="vm.toggleMenu()" class="hamburger">
+                            <span class="spin-transition-container">
+                                <i ng-hide="vm.isMenuOpen" class="glyphicon glyphicon-menu-hamburger spin-transition"></i>
+                                <i ng-show="vm.isMenuOpen" class="glyphicon glyphicon-remove spin-transition"></i>
+                            </span>
                         </a>
                     </li>
                     <li class="pull-right flat">
@@ -32,10 +36,14 @@
             <!-- MOBILE MENU -->
             <ul ng-show="vm.isMenuOpen" class="menu slide-open-closed">
                 <li ng-repeat="navItem in vm.navItems">
-                    <a ng-click="vm.toggleSubMenu(navItem)">{{navItem.name}}<i class="pull-right glyphicon glyphicon-menu-down menu-arrow"></i></a>
+                    <a href="/#/main/content/{{navItem.code}}/landing" ng-class="{active: vm.isActiveNavItem(navItem)}" ng-click="vm.toggleSubMenu(navItem)">
+                        {{navItem.name}}<i class="pull-right glyphicon glyphicon-menu-down menu-arrow"></i>
+                    </a>
                     <ul class="sub-menu slide-open-closed" ng-class="{ 'ng-hide' : !navItem.isOpen }">
                         <li ng-repeat="subNavItem in navItem.children">
-                            <a>{{subNavItem.name}}</a>
+                            <a href="/#/main/content/{{navItem.code}}/{{subNavItem.code}}" ng-click="vm.setActiveSubNavItem(subNavItem)" ng-class="{active: vm.isActiveSubNavItem(subNavItem)}">
+                                {{subNavItem.name}}
+                            </a>
                         </li>
                     </ul>
                 </li>
