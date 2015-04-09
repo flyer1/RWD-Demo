@@ -443,7 +443,7 @@ ul {
 .content-container {
   padding-left: 200px;
 }
-@media (max-width: 767px) {
+@media (max-width: 991px) {
   .content-container {
     padding-left: 0;
   }

@@ -62,22 +62,22 @@
 
         <!-- SIDE NAV -->
         <div>
-            <div class="sub-nav hidden-xs">
-                <div class="sub-nav-header">
+            <div class="sub-nav hidden-xs hidden-sm">
+                <div class=" sub-nav-header ">
                     <h3>Get Started</h3>
                 </div>
                 <ul>
-                    <li ng-repeat="item in vm.currNavItem.children">
-                        <a href="/#/main/content/{{vm.currNavItem.code}}/{{item.code}}" ng-click="vm.setActiveSubNavItem(item)" ng-class="{active: vm.isActiveSubNavItem(item)}">
-                            <i class="fa fa-caret-right"></i>{{item.name}}
+                    <li ng-repeat="item in vm.currNavItem.children ">
+                        <a href="/#/main/content/{{vm.currNavItem.code}}/{{item.code}} " ng-click="vm.setActiveSubNavItem(item) " ng-class="{active: vm.isActiveSubNavItem(item)} ">
+                            <i class="fa fa-caret-right "></i>{{item.name}}
                         </a>
                     </li>
                 </ul>
             </div>
             <!-- MAIN CONTENT -->
-            <div ui-view="content" class="main-content-container"></div>
+            <div ui-view="content " class="main-content-container "></div>
             <!-- FOOTER -->
-            <ng-include src="'./js/layout/footer.html'"></ng-include>
+            <ng-include src=" './js/layout/footer.html' "></ng-include>
         </div>
     </div>
 </div>
