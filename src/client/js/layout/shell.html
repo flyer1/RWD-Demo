@@ -34,12 +34,12 @@
     <div class="container main">
         <header class="banner">
             <!-- MOBILE MENU -->
-            <ul ng-show="vm.isMenuOpen" class="menu slide-open-closed">
+            <ul data-target="mobile-menu" class="menu collapse">
                 <li ng-repeat="navItem in vm.navItems">
                     <a href="/#/main/content/{{navItem.code}}/landing" ng-class="{active: vm.isActiveNavItem(navItem)}" ng-click="vm.toggleSubMenu(navItem)">
                         {{navItem.name}}<i class="pull-right glyphicon glyphicon-menu-down menu-arrow"></i>
                     </a>
-                    <ul class="sub-menu slide-open-closed" ng-class="{ 'ng-hide' : !navItem.isOpen }">
+                    <ul data-target="{{navItem.name}}" class="sub-menu collapse" ng-class="{ 'ng-hidex' : navItem.isOpen }">
                         <li ng-repeat="subNavItem in navItem.children">
                             <a href="/#/main/content/{{navItem.code}}/{{subNavItem.code}}" ng-click="vm.setActiveSubNavItem(subNavItem)" ng-class="{active: vm.isActiveSubNavItem(subNavItem)}">
                                 {{subNavItem.name}}
